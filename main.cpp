@@ -8,22 +8,25 @@
 using namespace std;
 using namespace std::filesystem;
 
+//I'm probably going to need these in every script so make it readable everywhere
+private path gameDir, modDir;
+private string gameDirS, modDirS;
+
 void GenMod(string name, string version, path modDir, path gameDir);
 
 int main() {
 	//really all main is gonna be used for is building the directory variables and storage
 	//interface script should be seperate
 	char prompt = '0'; //this is ugly :(
-	path gameDir, modDir;
-	string name, version, gameDirS, modDirS;
+	string name, version;
 	pair <string,string> files, dirs;
 
 	//will be removed for graphical interface
 	//terminal gui until release (may be repurposed)
 	cout << "Please enter your game directory: ";
-	 getline(cin, gameDirS);
+	getline(cin, gameDirS);
 	cout << endl <<"Please enter your mod directory: ";
-	 getline(cin, modDirS);
+	getline(cin, modDirS);
 
 	modDir = modDirS;
 	gameDir = gameDirS;
