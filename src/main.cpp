@@ -54,41 +54,6 @@ int main() {
 
 	gameDir = gameDirS;
 	screen.Loop(menu);
-/*
- *
- * Graveyard ahead, might need later but am too lazy to go back some commits
-while(!exists(gameDir)) {
-		cout << endl <<"Game directory does not exist";
-		cout << "Please enter your game directory: ";
-		cin >> gameDir;
-		gameDir = gameDirS;
-	};
-
-	//sheesh
-	//trap the user in a loop till they smarten up or create a new mod directory
-	if(!exists(modDir)) {
-		while(prompt == '0') {
-			if(!exists(modDir)) {
-				cout << endl << "Mod directory does not exist" << endl;
-				cout << "would you like to create a new mod directory? (0 or 1): ";
-				cin.get(prompt);
-
-			};
-			if(exists(modDir)) {
-				break;
-			};
-		};
-		if(prompt = true) {
-			cout << endl << "Please enter the mod name: ";
-			getline(cin, name);
-			cout << endl << "Please enter the mod version: ";
-			getline(cin, version);
-
-			create_directory(modDir);
-			GenMod(name, version, modDir, gameDir);
-		};
-	};
-	*/
 	while(appFlags.endProgram == 1){};
 	return 0;
 };
