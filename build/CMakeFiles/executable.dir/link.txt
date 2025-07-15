@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -Wl,--dependency-file=CMakeFiles/executable.dir/link.d CMakeFiles/executable.dir/main.cpp.o -o executable  -lm

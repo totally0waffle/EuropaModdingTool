@@ -96,6 +96,11 @@ EuropaModdingTool_EXTERNAL_OBJECTS =
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/main.cpp.o
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/build.make
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/compiler_depend.ts
+EuropaModdingTool: _deps/ftxui-build/libftxui-screen.a
+EuropaModdingTool: _deps/ftxui-build/libftxui-dom.a
+EuropaModdingTool: _deps/ftxui-build/libftxui-component.a
+EuropaModdingTool: _deps/ftxui-build/libftxui-dom.a
+EuropaModdingTool: _deps/ftxui-build/libftxui-screen.a
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable EuropaModdingTool"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EuropaModdingTool.dir/link.txt --verbose=$(VERBOSE)
