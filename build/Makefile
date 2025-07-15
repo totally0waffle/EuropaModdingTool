@@ -240,29 +240,29 @@ component/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/ftxui-build/CMakeFiles/component.dir/build.make _deps/ftxui-build/CMakeFiles/component.dir/build
 .PHONY : component/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EuropaModdingTool.dir/build.make CMakeFiles/EuropaModdingTool.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -283,9 +283,9 @@ help:
 	@echo "... component"
 	@echo "... dom"
 	@echo "... screen"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

@@ -72,28 +72,28 @@ include CMakeFiles/EuropaModdingTool.dir/flags.make
 CMakeFiles/EuropaModdingTool.dir/codegen:
 .PHONY : CMakeFiles/EuropaModdingTool.dir/codegen
 
-CMakeFiles/EuropaModdingTool.dir/main.cpp.o: CMakeFiles/EuropaModdingTool.dir/flags.make
-CMakeFiles/EuropaModdingTool.dir/main.cpp.o: /home/waffle/Documents/Testing\ Grounds/Europe\ Modding\ Kit/EuropaModdingTool/main.cpp
-CMakeFiles/EuropaModdingTool.dir/main.cpp.o: CMakeFiles/EuropaModdingTool.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EuropaModdingTool.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EuropaModdingTool.dir/main.cpp.o -MF CMakeFiles/EuropaModdingTool.dir/main.cpp.o.d -o CMakeFiles/EuropaModdingTool.dir/main.cpp.o -c "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/main.cpp"
+CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o: CMakeFiles/EuropaModdingTool.dir/flags.make
+CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o: /home/waffle/Documents/Testing\ Grounds/Europe\ Modding\ Kit/EuropaModdingTool/src/main.cpp
+CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o: CMakeFiles/EuropaModdingTool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o -MF CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o.d -o CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o -c "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/src/main.cpp"
 
-CMakeFiles/EuropaModdingTool.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EuropaModdingTool.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/main.cpp" > CMakeFiles/EuropaModdingTool.dir/main.cpp.i
+CMakeFiles/EuropaModdingTool.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EuropaModdingTool.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/src/main.cpp" > CMakeFiles/EuropaModdingTool.dir/src/main.cpp.i
 
-CMakeFiles/EuropaModdingTool.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EuropaModdingTool.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/main.cpp" -o CMakeFiles/EuropaModdingTool.dir/main.cpp.s
+CMakeFiles/EuropaModdingTool.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EuropaModdingTool.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/src/main.cpp" -o CMakeFiles/EuropaModdingTool.dir/src/main.cpp.s
 
 # Object files for target EuropaModdingTool
 EuropaModdingTool_OBJECTS = \
-"CMakeFiles/EuropaModdingTool.dir/main.cpp.o"
+"CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o"
 
 # External object files for target EuropaModdingTool
 EuropaModdingTool_EXTERNAL_OBJECTS =
 
-EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/main.cpp.o
+EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/build.make
 EuropaModdingTool: CMakeFiles/EuropaModdingTool.dir/compiler_depend.ts
 EuropaModdingTool: _deps/ftxui-build/libftxui-screen.a

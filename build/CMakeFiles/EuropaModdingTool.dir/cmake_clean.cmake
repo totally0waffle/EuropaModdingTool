@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/EuropaModdingTool.dir/link.d"
-  "CMakeFiles/EuropaModdingTool.dir/main.cpp.o"
-  "CMakeFiles/EuropaModdingTool.dir/main.cpp.o.d"
+  "CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o"
+  "CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o.d"
   "EuropaModdingTool"
   "EuropaModdingTool.pdb"
 )

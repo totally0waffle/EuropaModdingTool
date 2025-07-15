@@ -6,14 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 1. First create the executable target
 add_executable(EuropaModdingTool
-    "${PROJECT_SOURCE_DIR}/main.cpp"
+    "${PROJECT_SOURCE_DIR}/src/main.cpp"
 )
 
 # 2. THEN configure its properties
 target_compile_options(EuropaModdingTool PRIVATE -pthread -Wall -Wextra -pedantic)
 
 target_include_directories(EuropaModdingTool PRIVATE
-    ${PROJECT_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/include
 )
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool" -I"/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/include" -isystem "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/_deps/ftxui-src/include"
+CXX_INCLUDES = -I"/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/src" -I"/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/include" -isystem "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/_deps/ftxui-src/include"
 
 CXX_FLAGS = -std=gnu++17 -pthread -Wall -Wextra -pedantic
 

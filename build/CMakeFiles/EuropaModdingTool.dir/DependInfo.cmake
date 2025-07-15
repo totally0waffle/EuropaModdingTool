@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/main.cpp" "CMakeFiles/EuropaModdingTool.dir/main.cpp.o" "gcc" "CMakeFiles/EuropaModdingTool.dir/main.cpp.o.d"
+  "/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/src/main.cpp" "CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o" "gcc" "CMakeFiles/EuropaModdingTool.dir/src/main.cpp.o.d"
   "" "EuropaModdingTool" "gcc" "CMakeFiles/EuropaModdingTool.dir/link.d"
   )
 
