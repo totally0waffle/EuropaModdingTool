@@ -9,8 +9,7 @@ using namespace std;
 using namespace std::filesystem;
 
 //I'm probably going to need these in every script so make it readable everywhere
-private path gameDir, modDir;
-private string gameDirS, modDirS;
+
 
 void GenMod(string name, string version, path modDir, path gameDir);
 
@@ -18,7 +17,8 @@ int main() {
 	//really all main is gonna be used for is building the directory variables and storage
 	//interface script should be seperate
 	char prompt = '0'; //this is ugly :(
-	string name, version;
+	path gameDir, modDir;
+	string name, version, gameDirS, modDirS;
 	pair <string,string> files, dirs;
 
 	//will be removed for graphical interface

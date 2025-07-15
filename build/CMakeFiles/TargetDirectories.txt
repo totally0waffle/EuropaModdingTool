@@ -1,0 +1,3 @@
+/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles/EuropaModdingTool.dir
+/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles/edit_cache.dir
+/home/waffle/Documents/Testing Grounds/Europe Modding Kit/EuropaModdingTool/build/CMakeFiles/rebuild_cache.dir
