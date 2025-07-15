@@ -15,29 +15,30 @@ MacOS will not be officially supported by me, however if anyone wishes to implem
 
 # Roadmap
 
-- [ ] finish the readme....
-- [ ] Basic terminal gui
-- [ ] Mod Folder Creation
-  - [ ] Custom tags
-  - [x] Custom Folder Location
-  - [x] User defined name
-  - [x] User defined versioning
-  - [ ] Game version handling
-    - [x] Game version detection
-    - [ ] User defined game version
-- [ ] Directory browsing
-  - [ ] Mod Folder Browsing
-  - [ ] Game Folder Browsing
-- [ ] Mod Builder
-  - [ ] Common
-    - [ ] "Nation Builder" (countries, tags, provinces, etc)
-    - [ ] "Nation Flavor" (Governments, Ideas, Advisors, etc)
-    - [ ] World Functionality (trade goods, ages, great projects, religions, institutions, etc)
-    - [ ] Diplomacy (wargoals, interactions, hegemons, subject types, etc)
-  - [ ] Decisions
-  - [ ] Events
-  - [ ] History
-  - [ ] music
+- :yellow_circle: finish the readme....
+- :yellow_circle: Basic TUI
+  <sub>Requires the following to be completed</sub>
+- :yellow_circle: Mod Folder Creation
+  - :red_circle: Custom tags
+  - :green_circle: Custom Folder Location
+  - :green_circle: User defined name
+  - :green_circle: User defined versioning
+  - :yellow_circle: Game version handling
+    - :green_circle: Game version detection
+    - :red_circle: User defined game version
+- :red_circle: Directory browsing
+  - :red_circle: Mod Folder Browsing
+  - :red_circle: Game Folder Browsing
+- :red_circle: Mod Builder
+  - :red_circle: Common
+    - :red_circle: "Nation Builder" (countries, tags, provinces, etc)
+    - :red_circle: "Nation Flavor" (Governments, Ideas, Advisors, etc)
+    - :red_circle: World Functionality (trade goods, ages, great projects, religions, institutions, etc)
+    - :red_circle: Diplomacy (wargoals, interactions, hegemons, subject types, etc)
+  - :red_circle: Decisions
+  - :red_circle: Events
+  - :red_circle: History
+  - :red_circle: music
 
 <sub>This will change as progress continues</sub>
 
