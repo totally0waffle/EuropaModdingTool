@@ -36,7 +36,16 @@ int main() {
 	auto menu = Container::Vertical({
 		Input(&gameDirS, "Enter Game Directory"),
 		Input(&modDirS, "Enter Mod Directory"),
-		Button("Edit Mod", screen.ExitLoopClosure()),
+		Button("Edit Mod", [&]{
+				gameDir = gameDirS;
+				if(!exists (gameDir)){
+					cout << "Game directory does not exist";
+				};
+				if(exists (gameDirS)) {
+
+					screen.Exit();
+				}
+		}),
 		newModButton,
 	});
 
@@ -88,28 +97,30 @@ while(!exists(gameDir)) {
 //I would still probably use the built in paradox launcher mod tool to do this
 //but you know if I want this to work on a larger scale why not include it
 void GenMod(string name, string version, path modDir, path gameDir){
+	string gameVer, tags;
+	gameDir = "/home/waffle/.local/share/Steam/steamapps/common/Europa Universalis IV/";
+	//this part I am not proud of, I am basically just grabbing the game version from the provided game directory
+	//if this file isnt included then we have a real problem tbh
+	string gameVerPath = gameDir.u8string() += "eu4_branch.txt";
+	ifstream gameVerFile(gameVerPath);
+	gameVerFile >> gameVer;
+	gameVer.erase(0, 8);
+	gameVer.erase(6, 3);
+	gameVer += ".*";
 	auto screen = ScreenInteractive::Fullscreen();
 	auto menu = Container::Vertical({
 		Input(&name, "Enter Mod Name"),
 		Input(&version, "Enter Mod Version"),
+		Input(&gameVer, "Enter Game Version"),
+		Input(&tags, "Enter Mod Tags (each tag sperated by quotes)"), //Im gonna have to make a much better solution lol
 		Button("Generate .Mod and folder", [&] {
 			map<string, string> contents;
-			string gameVer;
-			gameDir = "/home/waffle/.local/share/Steam/steamapps/common/Europa Universalis IV/";
-			//this part I am not proud of, I am basically just grabbing the game version from the provided game directory
-			//if this file isnt included then we have a real problem tbh
+			//void function so if we can't open the directory just silently kill the function
 			string dotModPath = modDir.u8string() += "/descriptor.mod";
 			ofstream dotMod(dotModPath);
-			string gameVerPath = gameDir.u8string() += "eu4_branch.txt";
-			ifstream gameVerFile(gameVerPath);
-			//void function so if we can't open the directory just silently kill the function
 			if(gameVerFile.is_open() && dotMod.is_open()) {
-				gameVerFile >> gameVer;
-				gameVer.erase(0, 8);
-				gameVer.erase(6, 3);
-				gameVer += ".*";
 				contents.insert({"version=", version});
-				contents.insert({"tags={", "\"Alternative History\" }"}); //im gonna have to update this later tbh
+				contents.insert({"tags={", tags + "}"}); //im gonna have to update this later tbh
 				contents.insert({"name=", name});
 				contents.insert({"supported_version=", gameVer});
 				for (const auto& pair : contents) {

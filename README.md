@@ -18,14 +18,14 @@ MacOS will not be officially supported by me, however if anyone wishes to implem
 - :yellow_circle: finish the readme....
 - :yellow_circle: Basic TUI
   <sub>Requires the following to be completed</sub>
-- :yellow_circle: Mod Folder Creation
-  - :red_circle: Custom tags
+- :green_circle: Mod Folder Creation
+  - :green_circle: Custom tags
   - :green_circle: Custom Folder Location
   - :green_circle: User defined name
   - :green_circle: User defined versioning
-  - :yellow_circle: Game version handling
+  - :green_circle: Game version handling
     - :green_circle: Game version detection
-    - :red_circle: User defined game version
+    - :green_circle: User defined game version
 - :red_circle: Directory browsing
   - :red_circle: Mod Folder Browsing
   - :red_circle: Game Folder Browsing
