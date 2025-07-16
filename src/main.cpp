@@ -8,55 +8,57 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <ftxui/component/component_options.hpp>
 #include "flags.h"
+#include "builder.h"
 
 Flags appFlags;
+Builder builder;
 //I should remove these, but at this point im too high to care really
 // I love namespaces :-D
 using namespace std;
 using namespace std::filesystem;
 using namespace ftxui;
 
-void GenMod(path modDir, path gameDir);
+void GenMod();
 
 int main() {
 	//really all main is gonna be used for is our initial loading phase
 	//I am actually happy with this now I think
-	path gameDir, modDir;
 	string gameDirS, modDirS;
 	auto screen = ScreenInteractive::Fullscreen();
 	auto newModButton = Button("Make new Mod", [&] {
-		modDir = "./" + modDirS;
-		create_directory(modDir);
-		GenMod(modDir, gameDir);
+		builder.modDir = "./" + modDirS;
+		//use the old method here, preloading will use the new method
+		create_directory(builder.modDir);
+		GenMod();
 		screen.ExitLoopClosure();
 	});
 	auto menu = Container::Vertical({
 		Input(&gameDirS, "Enter Game Directory"),
 		Input(&modDirS, "Enter Mod Directory"),
 		Button("Edit Mod", [&]{
-				gameDir = gameDirS;
-				if(!exists (gameDir)){
+				builder.gameDir = gameDirS;
+				if(!exists (builder.gameDir)){
 					cout << "Game directory does not exist";
 				};
-				if(exists (gameDirS)) {
+				if(exists (builder.gameDir)) {
 					screen.Exit();
 				}
 		}),
 		newModButton,
 	});
-	gameDir = gameDirS;
+	builder.gameDir = gameDirS;
 	screen.Loop(menu);
-	while(appFlags.endProgram == true){};
+	while(appFlags.endProgram == false){};
 	return 0;
 };
 
 //this can be optimized by a mile but it works
 //This lets you input custom tags atleast which are kinda cool, but try and stick to default tags
 //but you know if I want this to work on a larger scale why not include it
-void GenMod(path modDir, path gameDir){
+void GenMod(){
 	string gameVer, tags, name, version;
-	gameDir = "/home/waffle/.local/share/Steam/steamapps/common/Europa Universalis IV/";
-	string gameVerPath = gameDir.u8string() += "eu4_branch.txt";
+	builder.gameDir = "/home/waffle/.local/share/Steam/steamapps/common/Europa Universalis IV/";
+	string gameVerPath = builder.gameDir.u8string() += "eu4_branch.txt";
 	ifstream gameVerFile(gameVerPath);
 	gameVerFile >> gameVer;
 	gameVer.erase(0, 8);
@@ -73,7 +75,7 @@ void GenMod(path modDir, path gameDir){
 		Button("Generate .Mod and folder", [&] {
 			map<string, string> contents;
 			//void function so if we can't open the directory just silently kill the function
-			string dotModPath = modDir.u8string() += "/descriptor.mod";
+			string dotModPath = builder.modDir.u8string() += "/descriptor.mod";
 			ofstream dotMod(dotModPath);
 			if(gameVerFile.is_open() && dotMod.is_open()) {
 				contents.insert({"version=", version});
