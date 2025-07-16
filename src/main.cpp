@@ -11,26 +11,23 @@
 
 Flags appFlags;
 //I should remove these, but at this point im too high to care really
+// I love namespaces :-D
 using namespace std;
 using namespace std::filesystem;
 using namespace ftxui;
 
-//I'm probably going to need these in every script so make it readable everywhere
-
-
-void GenMod(string name, string version, path modDir, path gameDir);
+void GenMod(path modDir, path gameDir);
 
 int main() {
-	//really all main is gonna be used for is building the directory variables and storage
-	//interface script should be seperate
+	//really all main is gonna be used for is our initial loading phase
+	//I am actually happy with this now I think
 	path gameDir, modDir;
-	string name, version, gameDirS, modDirS;
-	pair <string,string> files, dirs;
+	string gameDirS, modDirS;
 	auto screen = ScreenInteractive::Fullscreen();
 	auto newModButton = Button("Make new Mod", [&] {
 		modDir = "./" + modDirS;
 		create_directory(modDir);
-		GenMod("", "", modDir, gameDir);
+		GenMod(modDir, gameDir);
 		screen.ExitLoopClosure();
 	});
 	auto menu = Container::Vertical({
@@ -42,30 +39,23 @@ int main() {
 					cout << "Game directory does not exist";
 				};
 				if(exists (gameDirS)) {
-
 					screen.Exit();
 				}
 		}),
 		newModButton,
 	});
-
-	//will be removed for graphical interface
-	//terminal gui until release (may be repurposed)
-
 	gameDir = gameDirS;
 	screen.Loop(menu);
-	while(appFlags.endProgram == 1){};
+	while(appFlags.endProgram == true){};
 	return 0;
 };
 
 //this can be optimized by a mile but it works
-//I would still probably use the built in paradox launcher mod tool to do this
+//This lets you input custom tags atleast which are kinda cool, but try and stick to default tags
 //but you know if I want this to work on a larger scale why not include it
-void GenMod(string name, string version, path modDir, path gameDir){
-	string gameVer, tags;
+void GenMod(path modDir, path gameDir){
+	string gameVer, tags, name, version;
 	gameDir = "/home/waffle/.local/share/Steam/steamapps/common/Europa Universalis IV/";
-	//this part I am not proud of, I am basically just grabbing the game version from the provided game directory
-	//if this file isnt included then we have a real problem tbh
 	string gameVerPath = gameDir.u8string() += "eu4_branch.txt";
 	ifstream gameVerFile(gameVerPath);
 	gameVerFile >> gameVer;
@@ -77,6 +67,8 @@ void GenMod(string name, string version, path modDir, path gameDir){
 		Input(&name, "Enter Mod Name"),
 		Input(&version, "Enter Mod Version"),
 		Input(&gameVer, "Enter Game Version"),
+		//TODO find a better fucking solution :(
+		//{dropdown of defaults??? idk how to do that yet}
 		Input(&tags, "Enter Mod Tags (each tag sperated by quotes)"), //Im gonna have to make a much better solution lol
 		Button("Generate .Mod and folder", [&] {
 			map<string, string> contents;
