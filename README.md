@@ -26,9 +26,9 @@ MacOS will not be officially supported by me, however if anyone wishes to implem
   - :green_circle: Game version handling
     - :green_circle: Game version detection
     - :green_circle: User defined game version
-- :red_circle: Directory browsing
-  - :red_circle: Mod Folder Browsing
-  - :red_circle: Game Folder Browsing
+- :yellow_circle: Directory browsing
+  - :yellow_circle: Mod Folder Browsing
+  - :yellow_circle: Game Folder Browsing
 - :red_circle: Mod Builder
   - :red_circle: Common
     - :red_circle: "Nation Builder" (countries, tags, provinces, etc)
