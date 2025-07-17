@@ -2,8 +2,10 @@
 **Incredibly W.I.P modding tool for eu4**
 # Current Status
 **This is not in a usable state.**
+progress is changing rapidly so its hard to keep this section updated.
+currently it contains a TUI that lets you generate a .mod with custom tags, versions and name.
 
-Currently all it can do is make a very basic .mod file with a pre-assigned mod tag
+There is a pre-included binary in the build folder, but I am nowhere near proud enough yet to create a full blown release.
 
 # OS Support
 - [x] Linux/Unix
