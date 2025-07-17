@@ -16,10 +16,10 @@ Builder builder;
 //construct all of our folders
 //plans are to remove empty on save & quit
 //first position will be the parent second will be the child directory
-void FolderBuilder(map<string, string> folder;) {
+void FolderBuilder(map<string, string> folder;, ) {
     if(!is_map_subset(folder, builder.directories)) {
-        create_directory(builder.modDir + "/" + parent + folder);
-        builder.directories.insert(folder);
+        create_directory(builder.modDir + "/" + folder.first + "/" + folder.second);
+        builder.directories.insert(folder + "/");
     }
 }
 
@@ -30,4 +30,18 @@ void FileBuilder(path file) {
 
 void FileFiller(path file, map<string, string> contents;) {
 
+}
+//general use tool to find our direcotry parents and such
+//mostly utility for folder/file building
+map<string, string> ParentFinder(string searchTerm){
+    for (const auto& pair : builder.directories) {
+        if(pair.second == searchTerm) {
+            map<string, string> parent;
+            parent = ParentFinder(parent);
+            if(parent == 0) {
+                return <parent.first + pair.first, pair.second>;
+            }
+        }
+    }
+    return 0;
 }

@@ -15,7 +15,8 @@ class Builder {
 public:
     path gameDir;
     path modDir;
-    map<string, string> directories;
+    map<string, string> modDirectories;
+    map<string, string> gameDirectories;
     void FolderBuilder(string folder);
     void FileBuilder(path file);
     void FileFiller(path file, map<string, string> contents);

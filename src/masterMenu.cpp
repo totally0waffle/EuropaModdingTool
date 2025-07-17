@@ -17,4 +17,5 @@ using namespace ftxui;
 
 void master(path modDir, path gameDir) {
     //Here we sould pre-load all of our mod folder contents into variables so we can modify them later
+
 };
