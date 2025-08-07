@@ -20,10 +20,9 @@ void FolderBuilder(map<string, string> folder;, ) {
     if(!is_map_subset(folder, builder.directories)) {
         //we need to check if their is a parent or the parent is the root
         //refactored implementation, do some bug testing and see if this solution works (in my mind it should?)
+        //being that folders in pos 1 should end in a slash it should work fine this way
         string dir;
-        if(folder.first == "" || folder.second == "") {
-            dir = builder.modDir + "/" + folder.first + folder.second;
-        }
+        dir = builder.modDir + "/" + folder.first + folder.second;
         create_directory(dir);
         builder.directories.insert(folder + "/");
     }
