@@ -1,7 +1,7 @@
 # EuropaModdingTool
 **Incredibly W.I.P modding tool for eu4**
 # Current Status
-**This is not in a usable state.**
+**This is not in a usable state. Please refer to the [journal](Journal.md)**
 progress is changing rapidly so its hard to keep this section updated.
 currently it contains a TUI that lets you generate a .mod with custom tags, versions and name.
 
