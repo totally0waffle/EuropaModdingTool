@@ -18,7 +18,13 @@ Builder builder;
 //first position will be the parent second will be the child directory
 void FolderBuilder(map<string, string> folder;, ) {
     if(!is_map_subset(folder, builder.directories)) {
-        create_directory(builder.modDir + "/" + folder.first + "/" + folder.second);
+        //we need to check if their is a parent or the parent is the root
+        //refactored implementation, do some bug testing and see if this solution works (in my mind it should?)
+        string dir;
+        if(folder.first == "" || folder.second == "") {
+            dir = builder.modDir + "/" + folder.first + folder.second;
+        }
+        create_directory(dir);
         builder.directories.insert(folder + "/");
     }
 }
