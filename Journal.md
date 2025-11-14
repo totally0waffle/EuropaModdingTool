@@ -26,3 +26,16 @@ I know steam has its problems as well but atleast valve is willing to contribute
 
 Knowing this is the state of th internet alongside how terrible the state of my country (cananda) is I genuinely consider that suicide may be the only path in life for me. I wasted the first 5 years of my adult life persuing what I love only to be hit by covid, then a global recession (if you dont see it you are part of the problem), and a job market crash which hasn't been seen since the depression. It feels like my entire life has been for nothing I cant envision a future for myself and I can only see it getting worse and worse as time goes on. I don't wanna keep living in this hellhole we call a society, so I do everything I can to self destruct. I will take myself out before I am turned into either a corporate fleshlight or a body bag in some world conflict.
 This will be the only and last journal entry covering a personal topic here. If I find the time during my day I will create a dedicated repo for it specifically. Don't expect many changes to come for a while, I am genuinely sorry to dissapoint anyone.
+
+(2025-11-14 @ 12:13pm MST)
+Im gonna go back and refactor a bunch of code, aswell as scrap the TUI idea. This project needs a proper gui so in order to get that part of my plan accomplished im gonna try and learn/use QT being that it should be usable on all os's even if my code is kinda hardwired for linux specifically right now. In future im gonna be smarter about building for multi-os. This project should pick up some steam now that winter has hit and that I am considering quitting this position just due to mental health reasonings. If that does become the case projects like this will become my full time gig.
+
+Currently my next steps are as follows:
+- [ ] [Replace User interface](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+- [ ] [Refactor Directory System](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+- [ ] [Compile Modifier Variables](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+- [ ] [Compile Culture List](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+- [ ] [Compile Religion List](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+- [ ] [Compile Province List](https://github.com/totally0waffle/EuropaModdingTool/issues/1)
+
+The compilations are for in app runtime compilations as all of those values I plan on being modifiable and editable even if they are stored in various places its better that they can be edited at runtime rather than have them hardcoded directly into the app like the modifiers and traits.
